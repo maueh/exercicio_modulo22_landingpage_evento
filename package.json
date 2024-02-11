@@ -2,9 +2,10 @@
   "name": "landing-page-event",
   "version": "1.0.0",
   "description": "",
+  "source": "src/index.html",
   "scripts": {
     "dev": "parcel src/index.html src/styles/main.scss src/scripts/main.js",
-    "build": "parcel src/index.html"
+    "build": "parcel build"
   },
   "author": "",
   "license": "ISC",
