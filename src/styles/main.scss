@@ -1,0 +1,67 @@
+@use "variables";
+@use "card";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: variables.$silver;
+  font-family: Archivo;
+}
+
+html {
+  font-size: 10px;
+
+  @media (max-width: 640px) {
+    font-size: 7px;
+  }
+}
+
+body {
+  background-color: black;
+  background-image: url("../images/fundo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 15px;
+  font-size: 2.4rem;
+
+  &::before {
+    background-image: radial-gradient(
+      variables.$innerVignette,
+      variables.$outerVignette
+    );
+    z-index: -1;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+button,
+.button {
+  display: inline-flex;
+  padding: 16px 32px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  background-image: linear-gradient(
+    variables.$lightSilver,
+    variables.$darkSilver
+  );
+  background-color: variables.$darkSilver;
+  border: none;
+  color: variables.$white;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 250ms ease;
+
+  &:hover {
+    background-image: none;
+    transition: transform 250ms ease;
+    transform: scale(1.05);
+  }
+}
